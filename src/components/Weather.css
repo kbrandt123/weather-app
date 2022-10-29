@@ -1,0 +1,46 @@
+.weather-img {
+  position: relative;
+  bottom: 80px;
+  right: 80px;
+  float: right;
+  clear: none;
+  object-fit: contain;
+  width: 160px;
+  height: 100%;
+}
+
+.weather-ul {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row-gap: 50px;
+  padding: 0;
+}
+
+.weather-li {
+  border: solid #f2f2f2 1px;
+  box-shadow: inset 0 0px 4px black;
+  border-radius: 3px;
+  list-style: none;
+  background: #f2f2f2;
+}
+
+.delete {
+  position: relative;
+  bottom: 180px;
+  left: 140px;
+  overflow: visible;
+  width: 20px;
+  float: right;
+  clear: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: grey;
+}
+
+.allweather-info {
+  margin-left: 20px;
+}
