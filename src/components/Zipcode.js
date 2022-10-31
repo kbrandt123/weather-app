@@ -12,8 +12,6 @@ const Zipcode = (props) => {
       `https://api.openweathermap.org/data/2.5/weather?zip=${zipInputRef.current.value},us&units=imperial&APPID=5a4b2d457ecbef9eb2a71e480b947604`
     );
     const data = await res.json();
-    // I can pass the state over a different componenet to render the data.
-    console.log(data);
 
     return data;
   };

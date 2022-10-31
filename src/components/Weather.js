@@ -51,7 +51,6 @@ const Weather = (props) => {
     e.stopPropagation();
     const newList = list.filter((item) => item.id !== id);
     setList(newList);
-    console.log(id);
   };
 
   if (list.length === 0) {
@@ -80,14 +79,15 @@ const Weather = (props) => {
             <a
               href={`/forcast/${el.zip}`}
             >{`Show 5-day forcast for ${el.name}`}</a>
-            <img
-              className="weather-img"
-              src={`/images/${
-                el.conditions === "Mist" || el.conditions === "Haze"
-                  ? "clouds"
-                  : el.conditions
-              }.png`}
-            />
+            <div className="weather-img">
+              <img
+                src={`/images/${
+                  el.conditions === "Mist" || el.conditions === "Haze"
+                    ? "clouds"
+                    : el.conditions
+                }.png`}
+              />
+            </div>
             <button className="delete" onClick={(e) => handleRemove(e, el.id)}>
               X
             </button>

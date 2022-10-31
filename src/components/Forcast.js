@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Forcast.css";
 
@@ -19,8 +18,6 @@ const Forcast = () => {
     const data = await res.json();
     return data;
   };
-  const test = useParams();
-  console.log(test);
 
   useEffect(() => {
     fiveForcast().then((res) => setCoords(res));
