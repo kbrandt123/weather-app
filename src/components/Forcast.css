@@ -1,0 +1,44 @@
+.forcast-img {
+  position: relative;
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.forcast-ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.forcast-li {
+  position: relative;
+  border: solid 0.5px;
+  list-style: none;
+  margin-bottom: 0;
+  line-height: 60px;
+  padding-left: 20px;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+}
+
+.forcast-header {
+  position: relative;
+  border: solid 0.5px;
+  list-style: none;
+  margin-bottom: 0;
+  line-height: 60px;
+  padding-left: 20px;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+}
+
+.navigate {
+  position: relative;
+  margin-top: 20px;
+}
