@@ -42,7 +42,7 @@ const Forcast = () => {
     };
     return date.toLocaleDateString("en-US", format);
   };
-
+  // Navigates back to home page
   const navigateZipcodes = () => {
     navigate("/");
   };
