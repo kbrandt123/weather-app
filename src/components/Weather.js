@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./Weather.css";
 
 // Component is used render the list data and pass over needed data for a five day forcast via useNavigate.
 const Weather = (props) => {
+  const [isFahrenheit, setIsFahrenheit] = useState(true);
+  const [degree, setDegree] = useState("°F");
   const navigate = useNavigate();
+
   const navigateForcast = (e, el) => {
     navigate(`/forcast/${el.zip}`, {
       state: {
@@ -12,6 +16,11 @@ const Weather = (props) => {
         lon: el.lon,
       },
     });
+  };
+
+  const toggleDegree = () => {
+    setIsFahrenheit((prevState) => !prevState);
+    setDegree((prevDegree) => (prevDegree === "°C" ? "°F" : "°C"));
   };
 
   return (
@@ -27,7 +36,14 @@ const Weather = (props) => {
               <h3>Temperatures Today:</h3>
             </div>
 
-            <p>{`Current ${el.currentTemp} - Max ${el.maxTemp} - Min ${el.minTemp}`}</p>
+            <p>
+              {`Current ${el.currentTemp} - Max ${el.maxTemp}`}
+              <span onClick={toggleDegree} style={{ cursor: "pointer" }}>
+                {" "}
+                {degree}
+                {` - Min ${el.minTemp} ${degree}`}
+              </span>
+            </p>
 
             <a
               onClick={(e) => navigateForcast(e, el)}
